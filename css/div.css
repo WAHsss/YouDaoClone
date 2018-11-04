@@ -1,0 +1,17 @@
+
+.div1{
+    width: 475px;
+    height: 100px;
+    float: left;
+    padding-left: 40px;
+    margin-bottom: 10px;
+    background: cornflowerblue;
+}
+.div2{
+    width: 475px;
+    height: 100px;
+    float: left;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    background: #55ed50;
+}

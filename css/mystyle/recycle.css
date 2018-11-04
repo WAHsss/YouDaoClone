@@ -1,0 +1,36 @@
+.my-text-style{
+    color: white;
+    font-size: 230%;
+    margin-left: -10px;
+}
+.my-leftbox{
+    text-align: center;
+}
+
+.my-middle-panel{
+    margin-top: 20px;
+}
+.my-middle-overflow{
+    margin-top: 20px;
+    overflow-y:scroll;
+    width:90%px;
+    height:520px;
+}
+.my-recycle-search{
+    overflow-y:scroll;
+    height:400px;
+}
+.drag-line{
+    margin-right: 5px;
+    width: 2px;
+    height: 700px;
+    background-color: #E0E1E5;
+    z-index: 10;
+    cursor: ew-resize !important;
+}
+.main-folder-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}

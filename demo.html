@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Team3note</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/mystyle/main.css"/>
+
+	<link  rel="stylesheet" href="./css/div.css">
+	<!--里面所有class的以my开头的都是原生的格式，其他的均为bootstrap格式-->
+</head>
+<body  onload="shownotebook()">
+	<!--左边的导航-->
+		<nav class="navbar navbar-default title-box text-center" style="margin: 0;">
+    	<div class="container">
+    		<div class="navbar-header">
+    			<a href="demo.html" class="navbar-brand"><img src="img/logo.jpg" alt="有道云笔记" class="logoimg"/></a>
+    		</div><!--navbar-header-->
+    		<ul class="nav navbar-nav navbar-left my-nav-cloudnote">
+    			<li>
+    				<a href="#">
+    					<span class="navigation ">云笔记</span>
+    				</a>
+    			</li>
+    		</ul>
+<!-- 右边的导航-->
+ 			<ul class="nav navbar-nav navbar-right">
+				<li><img src="img/北极星小姐姐.jpg" style="width:65px;height: 50px;"/></li>
+    			<li class="dropdown">
+    				<a href="##"class="dropdown-toggle" data-toggle ="dropdown"  onclick="information()" >
+    					<span class="caret" ></span></a>
+    				<ul class="dropdown-menu pull-left">
+    					<li><a id="username"></a></li>
+    					<li><a href="userinfo.html">账号设置</a></li>
+
+    					<li><a onClick="logout()">注销登陆</a></li>
+
+    					<li class="divider"><a href="#"></a></li>
+    					<li class="disabled"><a href="#">关于</a></li>
+    				</ul>
+    			</li>
+    			<li>
+    				<a href="#">
+    					<span class="navigation ">拓展</span>
+    				</a>
+    			</li>
+    			<li class="li1">
+    				<a href="#">
+    					<span class="navigation">拓展</span>
+    				</a>
+    			</li>
+    		</ul><!--line 37 nav-->
+		</div>
+    </nav>
+ 
+ <!--上面的是导航框-->
+ 
+  <div class="row" style="margin: 0;padding: 0;">
+  		
+	  <div class="col-md-3 my-row1 my-row1-box1 ">
+		  <div class="row" style="margin: 0;padding: 0; margin-top: 30px">
+			  <div class="col-sm-8">
+				  <div class="input-group ">
+					  <span class="input-group-addon" id="basic-addon3">笔记本名</span>
+					  <input type="text" class="form-control" id="bookname" aria-describedby="basic-addon3">
+				  </div>
+			  </div>
+			<div class="col-sm-4">
+				<div class="dropdown text-center " >
+					<button type="button" class="btn btn-info " onClick="newnotebook()">
+					新建
+					</button>
+				</div><!--dropdown-->
+			</div>
+
+		  </div>
+
+		</div><!--col-md-3-->
+<!--搜索	  -->
+	  <div class="col-md-3 my-row1 my-row1-box2">
+		  <form id="searchform" name="searchform" method="get" action="#">
+			<div class="input-group input-group-lg" style="margin-top: 20px; width: 300px;margin-left: 30px;">
+      			<input type="text" name="searchtxt" id="searchtxt" class="form-control" placeholder="Search for..."/>
+      			<span class="input-group-btn">
+        		<input class="btn btn-default" id="s_search" type="button" onClick="showsearchmain()" value="GO!"/>
+      			</span>
+
+    		</div><!-- /input-group -->
+		  </form>
+	  </div><!--col-md-3-->
+<!--标题新建-->
+	  <div class="col-md-6 my-row1 my-row1-box3">
+	  	<form role="form" style="margin-top: 20px;">
+
+			<!--标题的输入框-->
+
+			<div class="col-sm-6 form-group form-group-lg">
+				<input type="text" id="notename" placeholder="标题" class="input-lg"/>
+			</div>
+			<!--标签的输入框-->
+			<div class="col-sm-3 form-group form-group-sm" style="margin-top: 7px">
+				<input type="text" id="mark" placeholder="标签" class="input-sm"/>
+
+			</div>
+  				<button class="btn btn-danger btn-lg" onClick="writenote()" id="btn1">保存</button>
+			    <button class="btn btn-danger btn-lg" onClick="newnote()" id="btn2">新建</button>
+			</form>
+	  </div><!--col-md-6-->
+		
+	</div><!--row1-->
+ 	
+
+ 	<div class="row  container-fluid" style="margin: 0;padding: 0;">
+ 		<div class="col-md-3 text-center my-row2"  id="notebook1">
+
+			<a class="btn btn-default my-notebook" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+				我的笔记本
+				<span class="glyphicon glyphicon-triangle-bottom"></span>
+			</a>
+			<div class="collapse in" id="collapseExample">
+				<div class="well" id="notebook">
+					<!--这里可以用php来打印输出数据库中存在的笔记本
+					例如-->
+
+				</div>
+			</div>
+			<!--回收站-->
+			<div>
+			<a href="recycle.html" role="button" class="btn btn-default my-recycle">
+				<span class="glyphicon glyphicon-trash"></span>回收站
+			</a>
+			</div>
+
+
+ 		</div><!--1.当前row的col-md-3-->
+ 		<div class="col-md-3 my-row2" >
+			<dl class="my-row2-box2 "  id="note" >
+				<!--这里是来打印输出note-->
+
+			</dl>
+ 		</div><!--2.当前row的col-md-3-->
+
+
+ 		<div class="col-md-6 my-row2">
+ 			<!--富文本框-->
+ 			<div id="div1" class="my-editor-toolbar"></div>
+			<div id="div2" class="my-editor-text"> <!--可使用 min-height 实现编辑区域自动增加高度-->
+
+			</div>
+			<!--富文本框-->
+ 		</div><!--3.当前row的col-md-6-->
+ 		
+ 	</div><!--row2-->
+
+
+
+
+
+
+
+
+
+    <!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+	<script type="text/javascript" src="wangEditor-3.1.0/release/wangEditor.min.js"></script>
+	<script src="js/myjs/showsearch.js"></script>
+	<script src="js/myjs/js1.js"></script>
+    <script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/layer/layer.js"></script>
+</body>
+</html>

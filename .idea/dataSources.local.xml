@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="@localhost" uuid="7cdbdce4-dbd0-415c-9cce-db0af5b6be4b">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    </data-source>
+    <data-source name="team3note" uuid="fc042759-0765-4d0d-a1fe-1cf3e17781f5">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <introspection-schemas>*:team3note</introspection-schemas>
+    </data-source>
+  </component>
+</project>
