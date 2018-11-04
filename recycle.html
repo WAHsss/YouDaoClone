@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Team3note</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/mystyle/main.css"/>
+
+    <link  rel="stylesheet" href="./css/div.css">
+    <link rel="stylesheet" href="./css/mystyle/recycle.css">
+    <!--里面所有class的以my开头的都是原生的格式，其他的均为bootstrap格式-->
+</head>
+<body onLoad="showdelete()">
+<!--左边的导航-->
+<nav class="navbar navbar-default title-box text-center navbar-fixed-top" style="margin: 0;">
+    <div class="container">
+        <div class="navbar-header col-xs-4">
+            <a href="recycle.html" class="navbar-brand"><img src="img/logo.jpg" alt="有道云笔记" class="logoimg"/></a>
+        </div><!--navbar-header-->
+        <div class="navbar-header col-xs-4 text-center">
+                <span class="my-text-style">回收站</span>
+        </div>
+        <!-- 右边的导航-->
+        <ul class="nav navbar-nav navbar-right">
+            <li><img src="img/北极星小姐姐.jpg" style="width:65px;height: 50px;"/></li>
+            <li class="dropdown">
+                <a href="##"class="dropdown-toggle" data-toggle ="dropdown"  onclick="information()" >
+                    <span class="caret" ></span></a>
+                <ul class="dropdown-menu pull-left">
+                    <li><a id="username"></a></li>
+                    <li><a href="##">账号设置</a></li>
+
+                    <li><a onClick="logout()">注销登陆</a></li>
+
+                    <li class="divider"><a href="#"></a></li>
+                    <li class="disabled"><a href="#">关于</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="navigation ">拓展</span>
+                </a>
+            </li>
+            <li class="li1">
+                <a href="#">
+                    <span class="navigation">拓展</span>
+                </a>
+            </li>
+        </ul><!--line 37 nav-->
+    </div>
+</nav>
+
+
+
+    <div style="margin-top: 50px"></div>
+
+    <div class="col-xs-2 my-leftbox" >
+        <div style="margin-top: 50px"></div>
+        <a href="demo.html" class="btn btn-default btn-lg" data-spy="affix" style="margin-left: -100px">
+            <span class="glyphicon glyphicon-menu-left"></span>
+            返回云笔记
+        </a>
+        <div class="drag-line main-folder-line"></div>
+
+    </div><!--col-xs-3-->
+
+
+    <div class="col-xs-7">
+        <div class="row">
+            <h1 class="text-center">列表</h1>
+        </div>
+
+        <hr>
+
+        <div class="row text-center">
+            <div class="col-sm-1"></div>
+            <button class="btn btn-default col-sm-4 btn-info" onClick="restore_all()">全部还原</button>
+            <div class="col-sm-1"></div>
+            <button class="btn btn-default col-sm-4 btn-danger" onClick="delete_all()">全部删除</button>
+        </div>
+
+        <div class=" my-middle-overflow" id="show_delete">
+
+
+
+        </div>
+        <div class="drag-line main-folder-line"></div>
+    </div> <!--col-xs-7-->
+    <div class="col-xs-3">
+
+        <form id="searchform" name="searchform" method="get" action="#"  style="margin-left: -20px">
+            <div class="input-group input-group-lg" style="margin-top: 20px; width: 300px;margin-left: 30px;">
+                <input type="text" name="searchtxt" id="searchtxt" class="form-control" placeholder="Search for..."/>
+                <span class="input-group-btn">
+        		<input class="btn btn-default" id="s_search" type="button" onClick="showsearchrecycle()" value="GO!"/>
+      			</span>
+            </div><!-- /input-group -->
+        </form>
+        <hr style="margin-top: 50px">
+        <dl class="my-recycle-search "  id="searchDeleteNote"  >
+            <!--这里是来打印输出note-->
+
+        </dl>
+
+    </div>
+
+
+
+
+
+
+
+
+
+<!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/layer/layer.js"></script>
+<script src="js/myjs/showsearch.js"></script>
+<script src="js/myjs/js1.js"></script>
+
+</body>
+</html>

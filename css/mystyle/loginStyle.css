@@ -1,0 +1,70 @@
+.row{
+	margin:0 !important;
+	padding: 0 !important;
+}
+.title-box{
+	background-color: #398DEE;
+}
+.logoimg{
+	margin: -5px 0 0 -150px !important;
+	padding: 0;
+
+}
+nav div ul li .navigation{
+	color: white;
+}
+nav div ul li:hover{
+	background-color:#204D74 ;
+}
+nav div ul .li1{
+	background-color: #1B6D85;
+}
+.boxout{
+	text-align: center;
+	margin: auto;
+	margin-top: 200px;
+	width: 600px;
+	height: 350px;
+	border: 1px solid #CCCCCC;
+	border-radius: 8px;
+	box-shadow: 0 0 30px rgba(0,0,0,.1);
+}
+.boxout-a{
+	margin-left: 70px;
+	width: 75%;
+	height: 50px !important;
+}
+.boxout-inp{
+	height: 50px !important
+}
+.boxout-b{
+	margin-left: -200px;
+	margin-top: 30px;
+	position:  relative;
+}
+.boxout-b-sp1{
+	font-size: 12px;
+}
+.forget_pwd{
+	margin-right: 100px;
+	font-size: 12px;  
+    color: #9BC1F1;  
+    text-decoration: none;  
+    position: relative;  
+    float: right;  
+    top: 5px;  
+}
+.boxout-c{
+	margin-top: 30px;
+}
+.boxout-button{
+	width: 150px;
+	height: 50px;
+	margin-right: 70px;
+}
+.boxout-register{
+	width: 150px;
+	height: 50px;
+	margin-left: 60px;
+	margin-right: 20px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Team3note</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/mystyle/main.css"/>
+
+    <link  rel="stylesheet" href="./css/div.css">
+    <link rel="stylesheet" href="./css/mystyle/recycle.css">
+    <link rel="stylesheet" href="./css/mystyle/userinfo.css">
+    <!--里面所有class的以my开头的都是原生的格式，其他的均为bootstrap格式-->
+</head>
+<body onLoad="showdelete()">
+<!--左边的导航-->
+<nav class="navbar navbar-default title-box text-center navbar-fixed-top" style="margin: 0;">
+    <div class="container">
+        <div class="navbar-header col-xs-4">
+            <a href="recycle.html" class="navbar-brand"><img src="img/logo.jpg" alt="有道云笔记" class="logoimg"/></a>
+        </div><!--navbar-header-->
+        <div class="navbar-header col-xs-4 text-center">
+            <span class="my-text-style">我的</span>
+        </div>
+        <!-- 右边的导航-->
+        <ul class="nav navbar-nav navbar-right">
+            <li><img src="img/北极星小姐姐.jpg" style="width:65px;height: 50px;"/></li>
+            <li class="dropdown">
+                <a href="##"class="dropdown-toggle" data-toggle ="dropdown"  onclick="information()" >
+                    <span class="caret" ></span></a>
+                <ul class="dropdown-menu pull-left">
+                    <li><a id="username"></a></li>
+                    <li  class="disabled"><a href="##">账号设置</a></li>
+
+                    <li><a href="denglu.html">注销登陆</a></li>
+
+                    <li class="divider"><a href="#"></a></li>
+                    <li class="disabled"><a href="#">关于</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="navigation ">拓展</span>
+                </a>
+            </li>
+            <li class="li1">
+                <a href="#">
+                    <span class="navigation">拓展</span>
+                </a>
+            </li>
+        </ul><!--line 37 nav-->
+    </div>
+</nav>
+
+
+
+<div style="margin-top: 50px"></div>
+<div class="col-lg-3">
+    <div class="drag-line main-folder-line" style=""></div>
+</div>
+
+<div class="col-lg-6">
+    <span class="text-center"><h2>重置密码</h2></span>
+    <hr>
+    <form method="post" class=" my-info-innerbox" action="alteruserinfo.php">
+
+        <div class="input-group input-group-lg my-email">
+            <span class="input-group-addon" >原密码&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <input type="text" id="agopassword" name="agopassword"  class="form-control" placeholder="在此输入原密码" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group input-group-lg my-email">
+            <span class="input-group-addon" >&nbsp;密码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <input type="password" id="password" name="password" class="form-control" placeholder="在此处输入密码" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group input-group-lg my-email">
+            <span class="input-group-addon" >确认密码</span>
+            <input type="password" id="makesurepwd" name="makesurepwd" class="form-control" placeholder="请输入同样的密码" aria-describedby="basic-addon1">
+        </div>
+
+        <button type="submit" onclick="alteruserinfo()" class="btn btn-primary btn-lg my-button">保存修改</button>
+        <a href="demo.html" type="button" class="btn btn-default btn-lg my-button"> 取消</a>
+    </form>
+    <div class="drag-line main-folder-line"></div>
+</div>
+
+
+
+
+
+
+
+
+<!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/layer/layer.js"></script>
+<script src="js/myjs/js1.js"></script>
+<script src="js/myjs/alteruserinfo.js"></script>
+</body>
+</html>

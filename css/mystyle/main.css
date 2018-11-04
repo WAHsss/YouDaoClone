@@ -1,0 +1,78 @@
+ *{
+ 	border-collapse:collapse;
+ }
+.title-box{
+	background-color: #398DEE;
+}
+.logoimg{
+	margin-top: -5px;
+	padding: 0;
+
+}
+.my-nav-cloudnote
+{
+	margin-left: 170px;
+}
+nav div ul li .navigation{
+	color: white;
+}
+
+nav div ul li:hover{
+	background-color:#204D74 ;
+}
+.my-row1{
+	padding: 0;
+	border:1px solid #CCCCCC;
+	height: 90px; 
+	text-align: center;
+}
+.my-row2{
+	padding: 0;
+	border: 1px solid #CCCCCC;
+	height: 550px;
+	border-bottom: hidden;
+}
+.my-row1-box1{
+		border-top: 0px;
+}
+.my-row1-box2{
+	border-top: 0px;
+}
+.my-row1-box3{
+	border-top: 0px;
+}
+.my-editor-toolbar{
+	border: 1px solid #ccc;
+	border-top: 0px;
+
+}
+ .my-note-show{
+	 margin-top: 5px;
+ }
+ .my-note-button {
+	 width: 70%;
+ }
+.my-editor-text{
+	border: 1px solid #ccc;
+	height: 500px;
+    border-bottom: hidden;
+}
+ .my-note-show{
+	 margin-top: 5px;
+ }
+ .my-note-button {
+	 width: 70%;
+
+ }
+
+.my-notebook, .my-recycle{
+	width: 100%;
+}
+.my-row2-box2{
+	overflow-y:scroll;
+	width:100%px;
+	height:520px;
+}
+ .white-space {
+	 white-space:pre
+ }
