@@ -20,8 +20,8 @@ function showsearchmain() {
             document.getElementById("note").innerHTML=xmlhttp.responseText;
         }
     }
-    xmlhttp.open("GET",'searchmain.php?cont='+cont,true);
-    xmlhttp.send(null);
+    xmlhttp.open("GET",'http://localhost:63342/test/phpAdmin/searchmain.php?cont='+cont,true);
+    xmlhttp.send();
 }
 function showsearchrecycle() {
     if (window.XMLHttpRequest)
@@ -45,6 +45,6 @@ function showsearchrecycle() {
             document.getElementById("searchDeleteNote").innerHTML=xmlhttp.responseText;
         }
     }
-    xmlhttp.open("GET",'searchrecycle.php?cont='+cont1,true);
-    xmlhttp.send(null);
+    xmlhttp.open("GET",'http://localhost:63342/test/phpAdmin/searchrecycle.php?cont='+cont1,true);
+    xmlhttp.send();
 }
